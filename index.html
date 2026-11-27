@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <base target="_blank">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A patient guide to starting rosuvastatin 5 mg after side effects with a statin, including the four-week plan and free pharmacy support.">
-  <title>Starting rosuvastatin 5 mg after side effects with a statin</title>
+  <meta name="description" content="A searchable list of BIHS-approved blood pressure monitors for home use, with links to Amazon UK.">
+  <title>BIHS-approved blood pressure monitors for home use</title>
   <style>
     :root {
       --nhs-blue: #005eb8;
@@ -36,7 +36,7 @@
     .nhs-logo { height: 64px; width: auto; background: #fff; padding: 4px; border-radius: 4px; flex-shrink: 0; }
     h1 { margin: 0; font-size: 2rem; }
     .subtitle { margin-top: .5rem; font-size: 1.05rem; }
-    .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
     h2 {
       color: var(--nhs-blue);
       margin-top: 2rem;
@@ -50,9 +50,7 @@
     .contact-box { background: #fff9e6; border-left: 6px solid var(--nhs-yellow); margin-top: 2rem; }
     .download-section { margin-top: 2rem; }
     ul { padding-left: 1.5rem; }
-    .schedule > div + div, .contact-box li + li { margin-top: .5rem; }
-    dt { font-weight: bold; }
-    dd { margin: .15rem 0 0; }
+    .contact-box li + li, .action-box li + li { margin-top: .5rem; }
     details { border: 1px solid #d8dde0; border-radius: 6px; margin-bottom: 1rem; background: #fafafa; }
     summary { padding: 1rem; cursor: pointer; font-weight: bold; color: var(--nhs-dark-blue); }
     details p { padding: 0 1rem 1rem; margin: 0; }
@@ -69,11 +67,41 @@
     }
     .download-button:hover { background: var(--nhs-dark-blue); }
     footer { margin-top: 3rem; background: var(--nhs-light-grey); padding: 2rem; }
-    .footer-content { max-width: 1000px; margin: 0 auto; color: #4c5c64; font-size: .9rem; }
+    .footer-content { max-width: 1100px; margin: 0 auto; color: #4c5c64; font-size: .9rem; }
     :focus-visible { outline: 3px solid #101c21; outline-offset: 3px; }
     a:focus-visible { background: #ffdc70; color: #101c21; }
     .skip { position: absolute; top: .75rem; left: 1rem; padding: .6rem .85rem; transform: translateY(-175%); }
     .skip:focus { transform: none; }
+    .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .filters { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 1rem; background: var(--nhs-light-grey); padding: 1rem; border-radius: 4px; margin: 1rem 0; }
+    .filters label { display: block; font-weight: bold; font-size: .95rem; margin-bottom: .25rem; }
+    .filters input, .filters select { width: 100%; padding: .55rem; font-size: 1rem; border: 2px solid #4c6272; border-radius: 4px; background: #fff; color: var(--text-colour); }
+    .count { font-weight: bold; margin: .5rem 0 1rem; }
+    table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    th, td { text-align: left; vertical-align: top; padding: .7rem .6rem; border-bottom: 1px solid #d8dde0; }
+    th { background: var(--nhs-blue); color: #fff; position: sticky; top: 0; }
+    tbody tr:nth-child(even) { background: #fafbfb; }
+    td:nth-child(5) { color: #4c5c64; font-size: .9rem; }
+    .muted { color: #768692; }
+    .az { display: inline-block; white-space: nowrap; font-weight: bold; text-decoration: none; padding: .35rem .7rem; border-radius: 4px; }
+    .az-direct { background: var(--nhs-green); color: #fff; }
+    .az-direct:hover { background: #005a2a; }
+    .az-search { border: 2px solid var(--nhs-blue); color: var(--nhs-dark-blue); background: #fff; }
+    .az-search:hover { background: var(--nhs-light-grey); }
+    .az-note { display: block; font-size: .82rem; color: #4c5c64; margin-top: .35rem; max-width: 16rem; white-space: normal; }
+    .key { display: flex; gap: 1.5rem; flex-wrap: wrap; font-size: .95rem; margin: .5rem 0 0; }
+    .key span { display: inline-flex; align-items: center; gap: .5rem; }
+    .swatch { flex-shrink: 0; width: 1rem; height: 1rem; border-radius: 3px; display: inline-block; }
+    .no-results { display: none; padding: 1rem; background: #fff9e6; border-left: 6px solid var(--nhs-yellow); }
+    @media (max-width: 860px) {
+      .filters { grid-template-columns: 1fr 1fr; }
+      .filters > div:first-child { grid-column: 1 / -1; }
+      thead { display: none; }
+      table, tbody, tr, td { display: block; width: 100%; }
+      tr { border: 1px solid #d8dde0; border-radius: 6px; margin-bottom: 1rem; padding: .5rem; background: #fff !important; }
+      td { border: none; padding: .3rem .4rem; }
+      td::before { content: attr(data-label); display: block; font-weight: bold; font-size: .8rem; color: #4c5c64; text-transform: uppercase; letter-spacing: .02em; }
+    }
     @media (max-width: 768px) {
       .header-content { flex-direction: column; align-items: flex-start; }
       .header-content > div { flex: auto; }
@@ -84,8 +112,10 @@
     @media print {
       body, header, .action-box, .download-button { background: #fff; color: #000; }
       header { padding-block: 0 1rem; }
-      .skip { display: none; }
-      dt, h2 { break-after: avoid; }
+      .skip, .filters { display: none; }
+      h2 { break-after: avoid; }
+      th { position: static; color: #000; background: #fff; }
+      tr { break-inside: avoid; }
     }
   </style>
 </head>
@@ -95,70 +125,1964 @@
     <div class="header-content">
       <img src="assets/NHS%2010mm%20-%20RGB%20Blue%20on%20white.jpg" alt="NHS Logo" class="nhs-logo">
       <div>
-        <h1>Starting rosuvastatin 5 mg after side effects with a statin</h1>
-        <p class="subtitle">Information and guidance for patients and carers in England</p>
+        <h1>Blood pressure monitors for home use</h1>
+        <p class="subtitle">Monitors approved by the British and Irish Hypertension Society (BIHS), with links to Amazon UK</p>
       </div>
     </div>
   </header>
   <main id="main" class="container" tabindex="-1">
-    <section class="intro-box" aria-label="About rosuvastatin">
-      <p>Rosuvastatin is a statin. It lowers cholesterol and can help reduce your chance of a heart attack or stroke. If you’ve had side effects with a statin before, your prescriber may suggest starting rosuvastatin on just three days a week to see how you get on. (<a href="https://www.nhs.uk/medicines/rosuvastatin/">NHS: Rosuvastatin</a>; <a href="https://www.england.nhs.uk/aac/publication/statin-intolerance-pathway/">NHS England: Statin intolerance pathway</a>)</p>
+    <section class="intro-box" aria-label="About this list">
+      <p>If you check your blood pressure at home, use a monitor you can trust. Monitors approved by the BIHS have been tested and shown to meet international accuracy standards. The BIHS says the NHS and NICE recommend these monitors for home use. (<a href="https://bihs.org.uk/blood_pressure_technology/find_a_professional_bp_monitor.aspx">BIHS: Find a blood pressure monitor you can trust</a>)</p>
+      <p>This page lists all 227 monitors on the BIHS home-use list. Use the search box and filters to narrow it down. (<a href="https://bihs.org.uk/_userfiles/pages/files/bp_monitors_website_list_9.xlsx">BIHS approved monitor list, updated 1 November 2026</a>)</p>
     </section>
 
-    <section class="action-box" aria-labelledby="plan">
-      <h2 id="plan">Your four-week starting plan</h2>
-      <p>Follow this schedule only if the healthcare professional who prescribed rosuvastatin has agreed it with you. If the instructions on your medicine label are different, check with your prescriber or pharmacist before taking it.</p>
-      <dl class="schedule">
+    <section class="action-box" aria-labelledby="before">
+      <h2 id="before">Before you buy</h2>
+      <ul>
+        <li><strong>Check the exact model number.</strong> Many monitors look alike or have similar names. Compare the model number on the box or listing with the one in this list.</li>
+        <li><strong>An upper-arm monitor is usually the best choice.</strong> Most monitors on the list go on your upper arm. If you're not sure which type to get, ask your GP practice or pharmacist.</li>
+        <li><strong>Get the right cuff size.</strong> Measure around the middle of your upper arm and check the cuff fits. A cuff that's too small or too big can give the wrong reading.</li>
+        <li><strong>Replace an old monitor.</strong> The BIHS advises replacing a home monitor after 4 years at most, or sooner if it's damaged (especially the cuff) or you're worried it's not accurate. (<a href="https://bihs.org.uk/blood_pressure_technology/find_a_professional_bp_monitor.aspx">BIHS: Monitor life</a>)</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="list">
+      <h2 id="list">BIHS-approved monitors</h2>
+      <div class="filters" role="search">
         <div>
-          <dt>Weeks 1 to 4</dt>
-          <dd>Take <strong>one 5 mg tablet on Monday, Wednesday and Friday only</strong>. Do not take it on the other four days.</dd>
+          <label for="q">Search by brand or model</label>
+          <input id="q" type="search" placeholder="For example, Omron or UA-651" autocomplete="off">
         </div>
         <div>
-          <dt>From week 5</dt>
-          <dd>If you’ve had no new or returning side effects, take <strong>one 5 mg tablet every day</strong>, including weekends. The tablet strength stays the same; only the number of days changes.</dd>
+          <label for="type">Monitor type</label>
+          <select id="type">
+            <option value="">All types</option>
+            <option value="upperarm">Upper arm</option>
+            <option value="wrist">Wrist</option>
+          </select>
         </div>
-      </dl>
-      <p>If side effects start or come back, or if you’re not sure whether you should switch to daily tablets, <strong>don’t increase how often you take it</strong>. Ask your prescriber what to do next. They can help you find a schedule or a different treatment that suits you. (<a href="https://www.nice.org.uk/guidance/ng238/chapter/Recommendations">NICE: What to do if a statin causes side effects</a>)</p>
-      <p>Taking rosuvastatin three days a week is outside the usual licensed instructions, which is sometimes called <strong>off-label</strong> use. This is an option a prescriber may choose for some people who have had trouble taking statins every day; this exact four-week schedule is not a rule for everyone. (<a href="https://swlimo.southwestlondon.icb.nhs.uk/clinical-guidance/cardiovascular/lipid-management/">South West London NHS: Lipid management guidance</a>)</p>
+        <div>
+          <label for="band">BIHS price band</label>
+          <select id="band">
+            <option value="">All price bands</option>
+            <option value="under50">Under £50</option>
+            <option value="under100">Under £100</option>
+            <option value="over100">Over £100</option>
+            <option value="unknownprice">Unknown price</option>
+          </select>
+        </div>
+        <div>
+          <label for="link">Amazon link</label>
+          <select id="link">
+            <option value="">All monitors</option>
+            <option value="direct">Amazon product page</option>
+            <option value="search">Amazon search only</option>
+          </select>
+        </div>
+      </div>
+      <div class="key" aria-label="Link key">
+        <span><span class="swatch" style="background:var(--nhs-green)"></span>View on Amazon: links to the exact model's Amazon UK page (32 monitors)</span>
+        <span><span class="swatch" style="border:2px solid var(--nhs-blue)"></span>Search Amazon: we couldn't find a page for the exact model, so this searches Amazon UK for it</span>
+      </div>
+      <p class="count" id="count" aria-live="polite">Showing 227 of 227 monitors</p>
+      <p class="no-results" id="none">No monitors match your search. Try a shorter search or clear the filters.</p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Manufacturer</th>
+            <th scope="col">Model</th>
+            <th scope="col">Type</th>
+            <th scope="col">BIHS price band</th>
+            <th scope="col">Features and notes</th>
+            <th scope="col">Amazon UK</th>
+          </tr>
+        </thead>
+        <tbody id="rows">
+        <tr data-type="wrist" data-band="under100" data-link="direct">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>BP UB-542</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">AF detection in this device does not mean that it will accurately measure blood pressure in patients with AF.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B019F741C6" rel="nofollow noopener">View on Amazon<span class="vh"> for A&amp;D BP UB-542</span></a><span class="az-note">Amazon showed this as currently unavailable when checked.</span></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="direct">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>BP UB-543</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">Correct position guidance indicator. 2 batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B071H38Z18" rel="nofollow noopener">View on Amazon<span class="vh"> for A&amp;D BP UB-543</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>TM-2657P (Derivative of TMTM2656)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=A%26D+TM-2657P+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for A&amp;D TM-2657P</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="direct">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-1010 (Derivative of UA-1020)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">50 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B019F73H44" rel="nofollow noopener">View on Amazon<span class="vh"> for A&amp;D UA-1010</span></a><span class="az-note">Amazon showed this as currently unavailable when checked.</span></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="direct">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-1020</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">4 x AA batteries or mains adaptor. 90 reading memory. D-ring or cylindrical-shaped cuffs.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B0179GB7T0" rel="nofollow noopener">View on Amazon<span class="vh"> for A&amp;D UA-1020</span></a><span class="az-note">Amazon lists this as the UA-1020W. Check the model number before you buy.</span></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-1030T (Derivative of UA-1020)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">50 reading memory. D-ring and cylindrical-shaped cuff available. Voice speaks BP reading.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=A%26D+UA-1030T+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for A&amp;D UA-1030T</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="direct">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-611 (Derivative of UA-651)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">4 x AAA batteries. 50 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B00JQ7SZLO" rel="nofollow noopener">View on Amazon<span class="vh"> for A&amp;D UA-611</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="direct">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-651</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">4 batteries, AC adapter. Also validated for use with a wide-range cuff: 22-42 cm.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B00IWRRS6C" rel="nofollow noopener">View on Amazon<span class="vh"> for A&amp;D UA-651</span></a><span class="az-note">This Amazon page offers several UA-651 versions. Choose the plain UA-651.</span></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-651 Plus</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">60 reading memory. 4 x AA batteries. Standard cu ts 22-32cm.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=A%26D+UA-651+Plus+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for A&amp;D UA-651 Plus</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-656BLE (Derivative of UA-651Plus)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">Standard Cuff sze 22-42cm.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=A%26D+UA-656BLE+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for A&amp;D UA-656BLE</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="direct">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-704</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">30 reading memory, manual inflation. 1 x AA battery. Minor protocol violation; only 2 observers used in the validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B00432T11K" rel="nofollow noopener">View on Amazon<span class="vh"> for A&amp;D UA-704</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="direct">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-705</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">30 reading memory, manual inflation. 1 x AA battery. Minor protocol violation; only 2 observers used in the validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B019F72N3K" rel="nofollow noopener">View on Amazon<span class="vh"> for A&amp;D UA-705</span></a><span class="az-note">Amazon showed this as currently unavailable when checked.</span></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-767</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">4 AA batteries. Lower accuracy at upper pressure range. Minor protocol violation; only 2 observers used in the valdiation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=A%26D+UA-767+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for A&amp;D UA-767</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-767 Plus</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">30 reading memory. 4 x AA batteries mains adaptor available. Minor protocol variation; only 2 observers used in the validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=A%26D+UA-767+Plus+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for A&amp;D UA-767 Plus</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="over100" data-link="search">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-767BT (Derivative of UA-774 &amp; UA-767 Plus)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Over £100</td>
+          <td data-label="Notes">Bluetooth output only available to telemedicine service providers. 4 x AA batteries mains adaptor available. Minor protocol violation: only 2 observers used in the validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=A%26D+UA-767BT+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for A&amp;D UA-767BT</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="over100" data-link="search">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-767PC (Derivative of UA-774 &amp; UA-767 Plus)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Over £100</td>
+          <td data-label="Notes">126 reading memory, optional software for use with PC. 4 x AA batteries. Minor protocol violation: only 2 observers used in the validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=A%26D+UA-767PC+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for A&amp;D UA-767PC</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="direct">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-767S (Derivative of UA-651)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B07H67F2Y9" rel="nofollow noopener">View on Amazon<span class="vh"> for A&amp;D UA-767S</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="direct">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-767S-W (Derivative of UA651)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B019F737IK" rel="nofollow noopener">View on Amazon<span class="vh"> for A&amp;D UA-767S-W</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-774</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">2 x 30 reading memory. 4 x AA batteries, mains adaptor available. Minor protocol violation; only 2 observers used in the validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=A%26D+UA-774+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for A&amp;D UA-774</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-779</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">7 reading memory. 4 x AA batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=A%26D+UA-779+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for A&amp;D UA-779</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-782 (Derivative of UA-787)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">90 reading memory, 4 x AA batteries, E-fit cuff fits arm 17-32cm.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=A%26D+UA-782+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for A&amp;D UA-782</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-787</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">60 reading memory. 4 x AA batteries. Standard cuff fits 22-43cm.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=A%26D+UA-787+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for A&amp;D UA-787</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UA-85X series comprising UA-851/2/3/4/5</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">Prices vary between models.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=A%26D+UA-85X+series+comprising+UA-851%2F2%2F3%2F4%2F5+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for A&amp;D UA-85X series comprising UA-851/2/3/4/5</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">A&amp;D</td>
+          <td data-label="Model"><strong>UM-201</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">4 x AA Batteries or AC Adapter. Latex-free cuffs. Large cuff up to 45cm.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=A%26D+UM-201+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for A&amp;D UM-201</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Alvita / Kinetik Wellbeing</td>
+          <td data-label="Model"><strong>TMB - 1491-S (Derivative of TMB-1491)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Alvita+TMB+-+1491-S+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Alvita / Kinetik Wellbeing TMB - 1491-S</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Alvita / Kinetik Wellbeing</td>
+          <td data-label="Model"><strong>TMB-1117-S (Derivative Device of TMB - 988)</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Alvita+TMB-1117-S+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Alvita / Kinetik Wellbeing TMB-1117-S</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Alvita / Kinetik Wellbeing</td>
+          <td data-label="Model"><strong>TMB-1970 (Derivative of TMB986)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Alvita+TMB-1970+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Alvita / Kinetik Wellbeing TMB-1970</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Alvita / Kinetik Wellbeing</td>
+          <td data-label="Model"><strong>TMB-2083-N (Derivative Device of TMB - 1491)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Alvita+TMB-2083-N+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Alvita / Kinetik Wellbeing TMB-2083-N</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>BM-091 (Derivative of KD-5915)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=BM-091+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd BM-091</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>Desa Pharma Tecnico Easy KD-558 (Derivative of Andon KD-5917)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Desa+Pharma+Tecnico+Easy+KD-558+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd Desa Pharma Tecnico Easy KD-558</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>iHealth BP3</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">Dock for Apple touch devices using an app of a BP monitoring system.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=iHealth+BP3+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd iHealth BP3</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>iHealth Feel BP5</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">Wireless device. Bluetooth technology shares data with iOS devices.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=iHealth+Feel+BP5+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd iHealth Feel BP5</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>iHealth Neo BP5S (Derivative of iHealth BP5)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">Wireless device with integral cuff.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=iHealth+Neo+BP5S+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd iHealth Neo BP5S</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="under100" data-link="direct">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>iHealth Sense BP7</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">Wireless wrist device. Bluetooth technology shares data with iOS devices.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B00IHYTO26" rel="nofollow noopener">View on Amazon<span class="vh"> for Andon Health Co. Ltd iHealth Sense BP7</span></a><span class="az-note">Amazon showed this as currently unavailable when checked.</span></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="direct">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>iHealth Track KN-550BT</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B01C5QS1T8" rel="nofollow noopener">View on Amazon<span class="vh"> for Andon Health Co. Ltd iHealth Track KN-550BT</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>iHealth View BP7S (Derivative of iHealth Sense BP7)</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=iHealth+View+BP7S+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd iHealth View BP7S</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>KD - 5810 (Derivative of KD5917)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=KD+-+5810+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd KD - 5810</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>KD-5001 (Derivative of Andon KD-5915)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=KD-5001+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd KD-5001</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>KD-551 (Derivative of KD-5917)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=KD-551+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd KD-551</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>KD-557 (Derivative of Andon KD-5915)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=KD-557+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd KD-557</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>KD-558 (Derivative of Andon KD-5915)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=KD-558+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd KD-558</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>KD-5811 (Derivative of KD5917)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=KD-5811+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd KD-5811</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100 unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>KD-5815, KD-5920, KD-5923, (Derivative of Andon KD-5965)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100 / Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=KD-5815%2C+KD-5920%2C+KD-5923+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd KD-5815, KD-5920, KD-5923</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>KD-5851</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=KD-5851+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd KD-5851</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>KD-5901/02/05/09/17/18/61/62/71 (All derivative models of Andon KD-5915)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=KD-5901%2F02%2F05%2F09%2F17%2F18%2F61%2F62%2F71+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd KD-5901/02/05/09/17/18/61/62/71</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>KD-5915</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=KD-5915+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd KD-5915</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>KD-5917</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=KD-5917+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd KD-5917</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>KD-595 (Derivative of Andon KD-5915)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=KD-595+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd KD-595</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Andon Health Co. Ltd</td>
+          <td data-label="Model"><strong>KD-5965</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=KD-5965+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Andon Health Co. Ltd KD-5965</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Aseptika</td>
+          <td data-label="Model"><strong>Activ8rlives BP3 (Derivative of Transtek TMB-1491)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Activ8rlives+BP3+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Aseptika Activ8rlives BP3</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">ASPEN/Rossmax</td>
+          <td data-label="Model"><strong>CF55F ((Derivative of CF175)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Rossmax+CF55F+%28+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for ASPEN/Rossmax CF55F (</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Avita</td>
+          <td data-label="Model"><strong>BPM15S</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">2 x AAA batteries, 2 x 90 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Avita+BPM15S+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Avita BPM15S</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Avita</td>
+          <td data-label="Model"><strong>BPM17</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">2 x AAA Batteries. 2 x 90 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Avita+BPM17+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Avita BPM17</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Avita</td>
+          <td data-label="Model"><strong>BPM63S</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">2 x 60 memory readings. 4 x AA Batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Avita+BPM63S+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Avita BPM63S</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="direct">
+          <td data-label="Manufacturer">Beurer</td>
+          <td data-label="Model"><strong>BM 28</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B0789569XB" rel="nofollow noopener">View on Amazon<span class="vh"> for Beurer BM 28</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Beurer GmbH</td>
+          <td data-label="Model"><strong>BM44</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">NB AF detection in this device does not mean that it has been validated for use in patients with AF.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Beurer+BM44+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Beurer GmbH BM44</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">Boots</td>
+          <td data-label="Model"><strong>TMB-2283 (Derivative of Transtek TMB-1491)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">2 x 90 reading memory (plus guest mode) 4 x AAA battery included. 22-42cm cuff included, Irregular heartbeat detection, Automatic inflation, One button operation.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Boots+TMB-2283+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Boots TMB-2283</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">BPUMP</td>
+          <td data-label="Model"><strong>BF1112</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">90 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=BPUMP+BF1112+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for BPUMP BF1112</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Braun</td>
+          <td data-label="Model"><strong>BP 3550</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">2 x AAA Alkaline Batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Braun+BP+3550+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Braun BP 3550</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">Braun</td>
+          <td data-label="Model"><strong>BP VitalScan Plus 1650</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">2 x AAA Alkaline Batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Braun+BP+VitalScan+Plus+1650+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Braun BP VitalScan Plus 1650</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Braun</td>
+          <td data-label="Model"><strong>BP6000, BP6100, BP6200 (All derivative Transtek TMB-986)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">Dual user function. 4 x AAA batteries or AC adaptor.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Braun+BP6000%2C+BP6100%2C+BP6200+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Braun BP6000, BP6100, BP6200</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="direct">
+          <td data-label="Manufacturer">Braun</td>
+          <td data-label="Model"><strong>BUA5000 (Derivative of Microlife BP100 Plus)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B013HT6MQG" rel="nofollow noopener">View on Amazon<span class="vh"> for Braun BUA5000</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">Cano Healthcare</td>
+          <td data-label="Model"><strong>TMB-1491SN</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">22-42cm cuff included, Irregular heartbeat detection, Automatic inflation, One button operation.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Cano+TMB-1491SN+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Cano Healthcare TMB-1491SN</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">Citizen</td>
+          <td data-label="Model"><strong>CH 432B</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">2 x LR03 Batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Citizen+CH+432B+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Citizen CH 432B</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">Citizen</td>
+          <td data-label="Model"><strong>CH 656C</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">2 x LR03 Batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Citizen+CH+656C+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Citizen CH 656C</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Citizen</td>
+          <td data-label="Model"><strong>CH-617 (Derivative of Health &amp; Life HL-168JD)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Citizen+CH-617+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Citizen CH-617</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Citizen</td>
+          <td data-label="Model"><strong>CH-618 (Derivative of Health &amp; Life HL-168JD)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Citizen+CH-618+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Citizen CH-618</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Duronic</td>
+          <td data-label="Model"><strong>BMP550 (Derivative of Transtek TMB-986)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">2 x 60 readings. 4 x AAA batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Duronic+BMP550+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Duronic BMP550</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Duronic</td>
+          <td data-label="Model"><strong>BPM 300 (Derivative of Transtek TMB-988</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">2 x AAA Alkaline Batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Duronic+BPM+300+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Duronic BPM 300</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">EuroMedix</td>
+          <td data-label="Model"><strong>Stabil-o-graph</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">Infra-red interface, AFL gentle measurement, bluetooth output. 2 x AA batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Stabil-o-graph+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for EuroMedix Stabil-o-graph</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Fleming Medical</td>
+          <td data-label="Model"><strong>Medicare LifeSense A1 Blood Pressure Monitor - MD 1814 (Derivative of TMB-1776)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Medicare+LifeSense+A1+Blood+Pressure+Monitor+-+MD+1814+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Fleming Medical Medicare LifeSense A1 Blood Pressure Monitor - MD 1814</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="direct">
+          <td data-label="Manufacturer">Fleming Medical</td>
+          <td data-label="Model"><strong>Medicare Lifesense A5 Blood Pressure Monitor - MD1806 (Derivative of TMB-1776)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B08RPH662B" rel="nofollow noopener">View on Amazon<span class="vh"> for Fleming Medical Medicare Lifesense A5 Blood Pressure Monitor - MD1806</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Grandway</td>
+          <td data-label="Model"><strong>G.LAB MD2200</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">2 x 120 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Grandway+G.LAB+MD2200+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Grandway G.LAB MD2200</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Grandway</td>
+          <td data-label="Model"><strong>MD2231</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">2 x AAA Alkaline Batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Grandway+MD2231+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Grandway MD2231</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Grandway</td>
+          <td data-label="Model"><strong>MD2301</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Grandway+MD2301+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Grandway MD2301</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Grandway</td>
+          <td data-label="Model"><strong>MD2680</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">4 x AA Batteries. Large Cuff up to 44cm available.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Grandway+MD2680+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Grandway MD2680</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Hartmann</td>
+          <td data-label="Model"><strong>Tensoval Duo Control</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Hartmann+Tensoval+Duo+Control+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Hartmann Tensoval Duo Control</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Hartmann</td>
+          <td data-label="Model"><strong>Tensoval Duo Controll II</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">Device uses a combination of auscultatory and oscillometric technology to measure BP. 4 x AA batteries. AF detection in this device does not mean that it will accurately measure BP in AF patients.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Hartmann+Tensoval+Duo+Controll+II+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Hartmann Tensoval Duo Controll II</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>AI-H971 (Derivative of Health &amp; Life HL888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">AF detection in this device does not mean that it will accurately measure BP in AF patients. Minor protocol violation: only 2 observers used in validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+AI-H971+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life AI-H971</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>BPM4 (Derivative of Health &amp; Life HL888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">Minor protocol violation: only 2 observers used in validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+BPM4+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life BPM4</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>BPM4TL (Derivative of Health &amp; Life HL888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">Minor protocol violation: only 2 observers used in validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+BPM4TL+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life BPM4TL</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>HL 168JD</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+HL+168JD+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life HL 168JD</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>HL 888HC (Derivative of Health &amp; Life HL 888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">Minor protocol violation: only 2 observers used in validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+HL+888HC+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life HL 888HC</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>HL158MA, KA (Derivative of Health &amp; Life HL168JD)</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+HL158MA%2C+KA+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life HL158MA, KA</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>HL168KB, ZA (Derivative of Health &amp; Life HL168JD)</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">AF detection in this device does not mean that it will accurately measure BP in AF patients.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+HL168KB%2C+ZA+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life HL168KB, ZA</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>HL858A1 (Derivative of HL888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+HL858A1+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life HL858A1</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>HL858BA, BC, HA, GA (Derivatives of Health &amp; Life HL888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">AF detection in this device does not mean that it will accurately measure BP in AF patients. Minor protocol violation: only 2 observers used in validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+HL858BA%2C+BC%2C+HA%2C+GA+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life HL858BA, BC, HA, GA</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>HL858DK (Derivative of HL888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+HL858DK+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life HL858DK</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>HL858EF,DF,CF (Derivative of Health &amp; Life HL888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">AF detection in this device does not mean that it will accurately measure BP in AF patients. Minor protocol violation: only 2 observers used in validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+HL858EF%2CDF%2CCF+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life HL858EF,DF,CF</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>HL868 NF, ZA, ZB (Derivatives of Health &amp; Life HL 888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">AF detection in this device does not mean that it will accurately measure BP in AF patients. Minor protocol violation: only 2 observers used in validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+HL868+NF%2C+ZA%2C+ZB+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life HL868 NF, ZA, ZB</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>HL868BA</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+HL868BA+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life HL868BA</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>HL868ED</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+HL868ED+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life HL868ED</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>HL888HA</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">4 x AA batteries. Minor protocol violation; only 2 observers used in the validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+HL888HA+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life HL888HA</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>WGNBPA-730,740,750 (Derivative of Health &amp; Life HL888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">AF detection in this device does not mean that it will accurately measure BP in AF patients. Minor protocol violation: only 2 observers used in validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+WGNBPA-730%2C740%2C750+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life WGNBPA-730,740,750</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health &amp; Life</td>
+          <td data-label="Model"><strong>WGNBPW-710,720 (Derivative of Health &amp; Life HL168JD)</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+%26+Life+WGNBPW-710%2C720+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health &amp; Life WGNBPW-710,720</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health Assure</td>
+          <td data-label="Model"><strong>HL 858JA, 858JT, 858SA, 858SK, 858ST, 959JA (All derivatives of Health &amp; Life HL888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=HL+858JA%2C+858JT%2C+858SA%2C+858SK%2C+858ST%2C+959JA+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health Assure HL 858JA, 858JT, 858SA, 858SK, 858ST, 959JA</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Health Assure</td>
+          <td data-label="Model"><strong>HL158JA, 158JT, 158SA, 158SK, 158ST (All derivatives of Health &amp; Life HL168JD)</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=HL158JA%2C+158JT%2C+158SA%2C+158SK%2C+158ST+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Health Assure HL158JA, 158JT, 158SA, 158SK, 158ST</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">HoMedics</td>
+          <td data-label="Model"><strong>360-EU (Derivative of Oregon Scientific BPU 330)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">6 x 30 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=HoMedics+360-EU+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for HoMedics 360-EU</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">HoMedics</td>
+          <td data-label="Model"><strong>BPA 2000 (Derivative of Transtek TMB 986)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">4 x AA batteries, AC Adapter.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=HoMedics+BPA+2000+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for HoMedics BPA 2000</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">HoMedics</td>
+          <td data-label="Model"><strong>BPA-3000 (Derivative of Transtek TMB-986)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">4 x AAA batteries, AC adapter.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=HoMedics+BPA-3000+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for HoMedics BPA-3000</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">HoMedics</td>
+          <td data-label="Model"><strong>BPW 1000 (Derivative of Transtek TMB-988)</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=HoMedics+BPW+1000+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for HoMedics BPW 1000</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">HoMedics</td>
+          <td data-label="Model"><strong>Salter BPA-8200-EU (Derivative of Andon KD-5915)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">2 x 60 memory reading.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=HoMedics+Salter+BPA-8200-EU+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for HoMedics Salter BPA-8200-EU</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">HoMedics</td>
+          <td data-label="Model"><strong>Salter BPA-9200-GB (Derivative of Andon KD-5915)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">2 x 60 memory reading.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=HoMedics+Salter+BPA-9200-GB+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for HoMedics Salter BPA-9200-GB</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Honsun</td>
+          <td data-label="Model"><strong>LD-520, 522, 526, 528, 530, 532, 533, 568, 582, 586N, 587 (Derivative of Honsun LD-578)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">4 x AA batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Honsun+LD-520%2C+522%2C+526%2C+528%2C+530%2C+532%2C+533%2C+568%2C+582%2C+586N%2C+587+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Honsun LD-520, 522, 526, 528, 530, 532, 533, 568, 582, 586N, 587</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">Honsun / Suresign</td>
+          <td data-label="Model"><strong>LD 3 (Derivative of LD 578)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">90 reading memory. 4 x AA batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Suresign+LD+3+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Honsun / Suresign LD 3</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">Honsun / Suresign</td>
+          <td data-label="Model"><strong>LD 578</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">30 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Suresign+LD+578+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Honsun / Suresign LD 578</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Honsun / Suresign</td>
+          <td data-label="Model"><strong>LD-588 (Derivative of LD-578)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Suresign+LD-588+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Honsun / Suresign LD-588</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100 unknownprice" data-link="search">
+          <td data-label="Manufacturer">Honsun / Suresign</td>
+          <td data-label="Model"><strong>LD30 (Derivative of LD 578)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100 / Unknown Price</td>
+          <td data-label="Notes">30 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Suresign+LD30+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Honsun / Suresign LD30</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Honsun/MediPro</td>
+          <td data-label="Model"><strong>MP-BP-BPM (Derivative of LD533)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Medipro+MP-BP-BPM+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Honsun/MediPro MP-BP-BPM</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">InBody</td>
+          <td data-label="Model"><strong>BP 170</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=InBody+BP+170+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for InBody BP 170</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Kessler</td>
+          <td data-label="Model"><strong>KS551 (Derivative of Rossmax ME701)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Kessler+KS551+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Kessler KS551</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="direct">
+          <td data-label="Manufacturer">Kinetik Wellbeing</td>
+          <td data-label="Model"><strong>TMB - 2088 (Derivative of TMB - 986)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">2 x 250 reading memory (plus guest mode), 4 x AA battery included. 22-42cm cuff included, movement detection indicator, cuff wrap detection, BP trend display, Buetooth sync results, irregular heartbeat detection, averages readings, WHO indicator, automatic inflation, one button operation.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B0B466ZSTZ" rel="nofollow noopener">View on Amazon<span class="vh"> for Kinetik Wellbeing TMB - 2088</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">Kinetik Wellbeing</td>
+          <td data-label="Model"><strong>TMB-1970 (Derivative of TMB-986)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">90 reading memory, 4 x AAA battery included. 22-42cm cuff included, automatic inflation, one button operation.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Kinetik+Wellbeing+TMB-1970+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Kinetik Wellbeing TMB-1970</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="direct">
+          <td data-label="Manufacturer">Kinetik Wellbeing</td>
+          <td data-label="Model"><strong>TMB-2080 (Derivative of TMB-1491)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">2 x 90 reading memory (plus guest mode) 4 x AAA battery included. 22-42cm cuff included, Irregular heartbeat detection, Automatic inflation, One button operation.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B0791TSVFH" rel="nofollow noopener">View on Amazon<span class="vh"> for Kinetik Wellbeing TMB-2080</span></a><span class="az-note">Amazon lists this as the Kinetik Wellbeing BPX2 Comfort (TMB-2080).</span></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">Kinetik Wellbeing</td>
+          <td data-label="Model"><strong>WBP1 (Derivative of Transtek TMB-1491)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">90 Reading Memory, 4 x AAA battery included. 22-42cm cuff included, Irregular heartbeat detection, Automatic inflation, One button operation.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Kinetik+Wellbeing+WBP1+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Kinetik Wellbeing WBP1</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Kinetik Wellbeing</td>
+          <td data-label="Model"><strong>WBP3 (Derivative of TMB988)</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">2 x 60 reading memory, 2 x AAA battery included. 13.5-21.5cm cuff, irregular heartbeat detection, averages readings automatic inflation, one button operation, positioning sensor and WHO indicator.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Kinetik+Wellbeing+WBP3+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Kinetik Wellbeing WBP3</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Kingyield</td>
+          <td data-label="Model"><strong>BP101H</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Kingyield+BP101H+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Kingyield BP101H</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Little Doctor Electronic (Nantong)</td>
+          <td data-label="Model"><strong>LD-521 (Derivative of Honsun LD-578)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">DD info from Honsun.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Little+Doctor+LD-521+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Little Doctor Electronic (Nantong) LD-521</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Little Doctor Electronic (Nantong)</td>
+          <td data-label="Model"><strong>LD-521A (Derivative of LD-578)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Little+Doctor+LD-521A+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Little Doctor Electronic (Nantong) LD-521A</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Little Doctor Electronic (Nantong)</td>
+          <td data-label="Model"><strong>LD12 (Derivative of SCIAN LD735)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">DD info from Honsun.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Little+Doctor+LD12+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Little Doctor Electronic (Nantong) LD12</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Little Doctor Electronic (Nantong)</td>
+          <td data-label="Model"><strong>LD51, LD51U, LD51A, LD51S (Derivative of Honsun LD-578)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">Model LD51S has spoken voice facility. DD info from Honsun.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Little+Doctor+LD51%2C+LD51U%2C+LD51A%2C+LD51S+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Little Doctor Electronic (Nantong) LD51, LD51U, LD51A, LD51S</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Maestro Innovations Corporation</td>
+          <td data-label="Model"><strong>Health Assure HL158JA, 158JT, 158SA, 158SK, 158ST (All derivatives of Health &amp; Life HL168JD)</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+Assure+HL158JA%2C+158JT%2C+158SA%2C+158SK%2C+158ST+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Maestro Innovations Corporation Health Assure HL158JA, 158JT, 158SA, 158SK, 158ST</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Maestro Innovations Corporation</td>
+          <td data-label="Model"><strong>Health Assure HL858JA, 858JT, 858SA, 858SK, 858ST, 959JA (All derivatives of Health &amp; Life HL888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Health+Assure+HL858JA%2C+858JT%2C+858SA%2C+858SK%2C+858ST%2C+959JA+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Maestro Innovations Corporation Health Assure HL858JA, 858JT, 858SA, 858SK, 858ST, 959JA</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Medinox Ltd</td>
+          <td data-label="Model"><strong>MX86005 (KD-5923) (Derivative of KD-5917)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Medinox+MX86005+%28KD-5923%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Medinox Ltd MX86005 (KD-5923)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Medipro/Rossmax</td>
+          <td data-label="Model"><strong>Medicare 100f</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Medicare+100f+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Medipro/Rossmax Medicare 100f</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Medisana</td>
+          <td data-label="Model"><strong>MTP Plus</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Medisana+MTP+Plus+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Medisana MTP Plus</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Microlife</td>
+          <td data-label="Model"><strong>A100 (Derivative of Microlife 3BTO-A)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">Last reading memory, 4 x AA batteries. Arrhythmia detection in this device does not mean that this device has been validated for use in patients with arrhythmia. Minor protocol violation; only 2 observers used in the validation study. Also validated using a standard cuff of a range of arm circumferences.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Microlife+A100+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Microlife A100</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="direct">
+          <td data-label="Manufacturer">Microlife</td>
+          <td data-label="Model"><strong>B3AFIB</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B07WD1FXF4" rel="nofollow noopener">View on Amazon<span class="vh"> for Microlife B3AFIB</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Microlife</td>
+          <td data-label="Model"><strong>BP A100 Plus</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">200 reading memory. 4 x AA batteries mains adaptor available.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Microlife+BP+A100+Plus+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Microlife BP A100 Plus</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Microlife</td>
+          <td data-label="Model"><strong>BP A200 Comfort</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Microlife+BP+A200+Comfort+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Microlife BP A200 Comfort</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Microlife</td>
+          <td data-label="Model"><strong>BP B1 Classic(Derivative of BP B3 AFIB)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Microlife+BP+B1+Classic+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Microlife BP B1 Classic</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="direct">
+          <td data-label="Manufacturer">Microlife</td>
+          <td data-label="Model"><strong>BP B2 Basic (Derivative of BP B3 AFIB)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B07WCHLQ8S" rel="nofollow noopener">View on Amazon<span class="vh"> for Microlife BP B2 Basic</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">Microlife</td>
+          <td data-label="Model"><strong>BP3AG1 (Derivative of 3BTO-A)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">Last reading memory. 4 x AA batteries, mains adaptor available. Minor protocol violation; only 2 observers used in the validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Microlife+BP3AG1+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Microlife BP3AG1</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="direct">
+          <td data-label="Manufacturer">Microlife</td>
+          <td data-label="Model"><strong>BPA2 Basic (Derivative of BP 3BTO-A)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B0C3G949VD" rel="nofollow noopener">View on Amazon<span class="vh"> for Microlife BPA2 Basic</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">Microlife</td>
+          <td data-label="Model"><strong>BPA3 (Derivative of BP 3BTO-A)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Microlife+BPA3+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Microlife BPA3</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="under50 unknownprice" data-link="search">
+          <td data-label="Manufacturer">Microlife</td>
+          <td data-label="Model"><strong>W2 Slim</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Under £50 / Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Microlife+W2+Slim+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Microlife W2 Slim</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Microlife</td>
+          <td data-label="Model"><strong>WatchBP Home - Pregnancy Only</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">Validated for home use in pregnancy only.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Microlife+WatchBP+Home+-+Pregnancy+Only+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Microlife WatchBP Home - Pregnancy Only</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="direct">
+          <td data-label="Manufacturer">Microlife</td>
+          <td data-label="Model"><strong>WatchBP Home A (BP3MX1-3) (Derivative Device of BP B3AFIB)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">The derivative device (Watch Home A) only to be supplied with this (22-42cm conical) cuff.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B019F930O4" rel="nofollow noopener">View on Amazon<span class="vh"> for Microlife WatchBP Home A (BP3MX1-3)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>BP760N HEM-7320-Z</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+BP760N+HEM-7320-Z+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare BP760N HEM-7320-Z</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>BP765 HEM-7311-ZSA</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+BP765+HEM-7311-ZSA+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare BP765 HEM-7311-ZSA</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="over100" data-link="direct">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>EVOLV (HEM-7600T-E)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Over £100</td>
+          <td data-label="Notes">Bluetooth function compatible with smart devices. Also Validated for home use in pregnancy and pre-eclampsia according to the &#x27;Universal Protocol&#x27;.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B01MT54RFU" rel="nofollow noopener">View on Amazon<span class="vh"> for Omron Healthcare EVOLV (HEM-7600T-E)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="direct">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>HEM - 7121J-E (Derivative of HEM-7130)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B08NXBRYFJ" rel="nofollow noopener">View on Amazon<span class="vh"> for Omron Healthcare HEM - 7121J-E</span></a><span class="az-note">Sold on Amazon as the OMRON X2 Basic (HEM-7121J-EO). Check the model number before you buy.</span></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>HEM - 7143T -EBK (Derivative of HEM-7130)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+HEM+-+7143T+-EBK+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare HEM - 7143T -EBK</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="over100" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>HEM - 7360-E- M6 Comfort (Derivative Device of BP760N (HEM7320-Z))</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Over £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+HEM+-+7360-E-+M6+Comfort+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare HEM - 7360-E- M6 Comfort</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="over100" data-link="direct">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>HEM - 7530T-E3 - OMRON Complete (Derivative of HEM - 7311 -ZSA (BP765))</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Over £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B08WTJY9J2" rel="nofollow noopener">View on Amazon<span class="vh"> for Omron Healthcare HEM - 7530T-E3 - OMRON Complete</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>HEM-7120</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+HEM-7120+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare HEM-7120</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="direct">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>HEM-7155-E-M3 Comfort (Derivative of BP760N (HEM-7320-Z))</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B0B4VS7P24" rel="nofollow noopener">View on Amazon<span class="vh"> for Omron Healthcare HEM-7155-E-M3 Comfort</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>HEM-7155T-EBK-M4 Intelli IT (Derivative of BP760N (HEM-7320-Z))</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+HEM-7155T-EBK-M4+Intelli+IT+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare HEM-7155T-EBK-M4 Intelli IT</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="over100" data-link="direct">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>HEM-7361T-EBK-M7 Intelli IT (Derivative of BP760N (HEM7320-Z))</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Over £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B089GL9T96" rel="nofollow noopener">View on Amazon<span class="vh"> for Omron Healthcare HEM-7361T-EBK-M7 Intelli IT</span></a><span class="az-note">Amazon showed this as currently unavailable when checked.</span></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>HEM-9200T</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+HEM-9200T+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare HEM-9200T</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="over100" data-link="direct">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>HEM-9601T Nightview</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Over £100</td>
+          <td data-label="Notes">Automatically measures silently night-time blood pressure. Clinically validated accuracy in different positions, even if the wrist rotates during sleep.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B0BZ4W4Y1G" rel="nofollow noopener">View on Amazon<span class="vh"> for Omron Healthcare HEM-9601T Nightview</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>M1 (HEM-4030-C-E (Derivative of M1 Plus (HEM-4011C-E))</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">14 reading memory, 2 AAA batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+M1+%28HEM-4030-C-E+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare M1 (HEM-4030-C-E</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="over100" data-link="direct">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>M10-IT (HEM-7080IT-E) (Derivative of M6 Comfort (HEM-7000-E))</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Over £100</td>
+          <td data-label="Notes">4 x AA batteries mains adaptor available.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B001DBQIJW" rel="nofollow noopener">View on Amazon<span class="vh"> for Omron Healthcare M10-IT (HEM-7080IT-E)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>M2 (HEM-7117) (Derivative of M3-I (HEM-7051-E))</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">21 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+M2+%28HEM-7117%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare M2 (HEM-7117)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100 unknownprice" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>M2 (HEM-7121-E) (Derivative of Omron HEM7130)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100 / Unknown Price</td>
+          <td data-label="Notes">HEM model number. This is not the same as the M2 (HEM-7117-E).</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+M2+%28HEM-7121-E%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare M2 (HEM-7121-E)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>M2 Basic (HEM-7116-E) (Derivative of M3-I (HEM-7051-E))</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">Previous memory only.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+M2+Basic+%28HEM-7116-E%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare M2 Basic (HEM-7116-E)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>M2 Basic (HEM-7120-E) (Derivative of Omron HEM7130)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">This is not the same as the M2 Basic (HEM-7116-E) device.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+M2+Basic+%28HEM-7120-E%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare M2 Basic (HEM-7120-E)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>M2 Compact (HEM-7102-E)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">14 Reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+M2+Compact+%28HEM-7102-E%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare M2 Compact (HEM-7102-E)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>M3 (HEM-7200-E)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">Cuff wrapping guide indicator, 60 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+M3+%28HEM-7200-E%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare M3 (HEM-7200-E)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="direct">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>M3 Comfort (HEM-7134-E)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">Also Validated for home use in pregnancy and pre-eclampsia according to the &#x27;Universal Protocol&#x27;.</td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B019DYT6DA" rel="nofollow noopener">View on Amazon<span class="vh"> for Omron Healthcare M3 Comfort (HEM-7134-E)</span></a><span class="az-note">Amazon showed this as currently unavailable when checked.</span></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>M3 Intellisense (HEM-70-51-E)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">Intellisense technology ensures that cuff is inflated to a comfortable level, detects irregular pulse.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+M3+Intellisense+%28HEM-70-51-E%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare M3 Intellisense (HEM-70-51-E)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>M6 (HEM-7001-E) Derivative of Omron 705 IT (HEM759-E)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">4 x AA batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+M6+%28HEM-7001-E%29+Derivative+of+Omron+705+IT+%28HEM759-E%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare M6 (HEM-7001-E) Derivative of Omron 705 IT (HEM759-E)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="over100" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>M6 Comfort (HEM-7221-E) (Derivative of M7 (HEM-780-E))</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Over £100</td>
+          <td data-label="Notes">One size cuff 22-42cm, 4 x AA batteries, AC mains adapter available.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+M6+Comfort+%28HEM-7221-E%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare M6 Comfort (HEM-7221-E)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="over100" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>M7 (HEM-780-E)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Over £100</td>
+          <td data-label="Notes">One-size cuff 22-42cm, 4 x AA batteries, AC mains adapter available. Also validated for use in obese adults and pregnancy - See Specialist Use list.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+M7+%28HEM-780-E%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare M7 (HEM-780-E)</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="under100 unknownprice" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>RS2 (HEM-6121-E) (Derivative of Omron RS3 (HEM-6130-E))</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Under £100 / Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+RS2+%28HEM-6121-E%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare RS2 (HEM-6121-E)</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="under100 unknownprice" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>RS6 (HEM-6221-E)</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Under £100 / Unknown Price</td>
+          <td data-label="Notes">90 reading memory. Positioning sensor. 2 x LR03 batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+RS6+%28HEM-6221-E%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare RS6 (HEM-6221-E)</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="over100" data-link="search">
+          <td data-label="Manufacturer">Omron Healthcare</td>
+          <td data-label="Model"><strong>RS8 (HEM-6310F-E)</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Over £100</td>
+          <td data-label="Notes">Positioning sensor, 2 x LR03 batteries, 100 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Omron+RS8+%28HEM-6310F-E%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Omron Healthcare RS8 (HEM-6310F-E)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="over100" data-link="search">
+          <td data-label="Manufacturer">Oregon Scientific</td>
+          <td data-label="Model"><strong>BPU 330</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Over £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Oregon+Scientific+BPU+330+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Oregon Scientific BPU 330</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Oregon Scientific</td>
+          <td data-label="Model"><strong>BPU321 (Derivative of Oregon Scientific BPU330)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">200 readings. 4 x AA batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Oregon+Scientific+BPU321+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Oregon Scientific BPU321</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Oregon Scientific</td>
+          <td data-label="Model"><strong>BPW810</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">2 x AAA Alkaline Batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Oregon+Scientific+BPW810+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Oregon Scientific BPW810</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Oregon Scientific</td>
+          <td data-label="Model"><strong>Tunstall BPU329</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">200 readings. Wireless transmission.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Oregon+Scientific+Tunstall+BPU329+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Oregon Scientific Tunstall BPU329</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Panasonic</td>
+          <td data-label="Model"><strong>EW 3106</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">42 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Panasonic+EW+3106+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Panasonic EW 3106</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Panasonic</td>
+          <td data-label="Model"><strong>EW 3109</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">90 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Panasonic+EW+3109+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Panasonic EW 3109</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Pangao</td>
+          <td data-label="Model"><strong>PG-800A11</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">2 x 1.5V AAA batteries. Also tested against International Protocol 2010 but insufficient data was reported to inform recommendation.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Pangao+PG-800A11+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Pangao PG-800A11</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Pangao</td>
+          <td data-label="Model"><strong>PG-800A36</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">90 reading memory. Rechargeable battery.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Pangao+PG-800A36+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Pangao PG-800A36</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Pangao</td>
+          <td data-label="Model"><strong>PG-800B11</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">90 reading memory, 4 x AA batteries. Validation approved according to the International Protocol 2010 only.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Pangao+PG-800B11+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Pangao PG-800B11</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Pangao</td>
+          <td data-label="Model"><strong>PG-800B26</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">2 x 90 reading memory. 4 x AA batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Pangao+PG-800B26+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Pangao PG-800B26</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Pangao</td>
+          <td data-label="Model"><strong>PG-800B5</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">90 reading memory, 4 x AA batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Pangao+PG-800B5+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Pangao PG-800B5</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Pangao</td>
+          <td data-label="Model"><strong>PG-800B68</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">90 reading memory, 4 x AA batteries, voice function.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Pangao+PG-800B68+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Pangao PG-800B68</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Philips</td>
+          <td data-label="Model"><strong>DL8760</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Philips+DL8760+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Philips DL8760</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="over100" data-link="search">
+          <td data-label="Manufacturer">Proton Healthcare</td>
+          <td data-label="Model"><strong>868BF (Derivative of Health &amp; Life HL868BA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Over £100</td>
+          <td data-label="Notes">180 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Proton+868BF+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Proton Healthcare 868BF</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Proton Healthcare</td>
+          <td data-label="Model"><strong>888EA (Derivative of Health &amp; Life HL888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">48 reading memory. 4 x AA batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Proton+888EA+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Proton Healthcare 888EA</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Proton Healthcare</td>
+          <td data-label="Model"><strong>888UP (Derivative of Health &amp; Life HL888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">99 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Proton+888UP+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Proton Healthcare 888UP</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Qardio Inc</td>
+          <td data-label="Model"><strong>QardioArm</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">Bluetooth requiring Quardio App. 4 x AAA Batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=QardioArm+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Qardio Inc QardioArm</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Riester</td>
+          <td data-label="Model"><strong>Ri-Champion N (OEM derivative of Microlife 3BTO-A)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">99 reading memory. 4 x AA batteries mains adaptor available.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Riester+Ri-Champion+N+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Riester Ri-Champion N</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Rossmax/Accumed</td>
+          <td data-label="Model"><strong>AC1000f (Derivative of CF175)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">NB Additional features on this device have not been tested for accuracy. It is validated for its BP measurement function only.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Rossmax+AC1000f+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Rossmax/Accumed AC1000f</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Rossmax/Accumed</td>
+          <td data-label="Model"><strong>C5 (Derivative of CF175)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">NB Additional features on this device have not been tested for accuracy. It is validated for its BP measurement function only.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Rossmax+C5+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Rossmax/Accumed C5</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Rossmax/Accumed</td>
+          <td data-label="Model"><strong>CF155 (Derivative of CF175)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Rossmax+CF155+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Rossmax/Accumed CF155</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Rossmax/Accumed</td>
+          <td data-label="Model"><strong>CF175</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">90 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Rossmax+CF175+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Rossmax/Accumed CF175</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Rossmax/Accumed</td>
+          <td data-label="Model"><strong>CH155 (Derivative of CF175)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Rossmax+CH155+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Rossmax/Accumed CH155</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Rossmax/Accumed</td>
+          <td data-label="Model"><strong>ME/AB/AC/AD/AE/AF/AJ/MJ/MW-701, MA/MR/MV-801, AK/AT/AW/MG/MH/MJ-150, AD761, AU941, AV151, AV351,AC761f, AW151, MA350, MA351, MC100, MR250, MH901, MW821 (All models derivative of ME701)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Rossmax+ME%2FAB%2FAC%2FAD%2FAE%2FAF%2FAJ%2FMJ%2FMW-701%2C+MA%2FMR%2FMV-801%2C+AK%2FAT%2FAW%2FMG%2FMH%2FMJ-150%2C+AD761%2C+AU941%2C+AV151%2C+AV351%2CAC761f%2C+AW151%2C+MA350%2C+MA351%2C+MC100%2C+MR250%2C+MH901%2C+MW821+%28All+models+derivative+of+ME701%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Rossmax/Accumed ME/AB/AC/AD/AE/AF/AJ/MJ/MW-701, MA/MR/MV-801, AK/AT/AW/MG/MH/MJ-150, AD761, AU941, AV151, AV351,AC761f, AW151, MA350, MA351, MC100, MR250, MH901, MW821 (All models derivative of ME701)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="direct">
+          <td data-label="Manufacturer">Rossmax/Accumed</td>
+          <td data-label="Model"><strong>X1, X3, X5 (Derivative of CF175)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B07193VSGD" rel="nofollow noopener">View on Amazon<span class="vh"> for Rossmax/Accumed X1, X3, X5</span></a><span class="az-note">This Amazon page is for the X5. Check it is the version you want.</span></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Rossmax/Accumed</td>
+          <td data-label="Model"><strong>X9 (Derivative of CF175</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">NB Additional features on this device have not been tested for accuracy. It is validated for its BP measurement function only.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Rossmax+X9+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Rossmax/Accumed X9</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Rossmax/Accumed</td>
+          <td data-label="Model"><strong>Z1 (Derivative of CF175)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Rossmax+Z1+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Rossmax/Accumed Z1</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Rossmax/Accumed</td>
+          <td data-label="Model"><strong>Z5 (Derivative of CF175)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Rossmax+Z5+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Rossmax/Accumed Z5</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Rossmax/Alvita</td>
+          <td data-label="Model"><strong>CG155f (Derivative of CF175)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Rossmax+CG155f+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Rossmax/Alvita CG155f</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Rossmax/Alvita</td>
+          <td data-label="Model"><strong>MA801f (Derivative of CF175)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Rossmax+MA801f+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Rossmax/Alvita MA801f</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Sabre Nederland BV</td>
+          <td data-label="Model"><strong>BPM610(x) (Derivative of Health &amp; Life HL888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">Minor protocol violation; only 2 observers used in the validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Sabre+BPM610%28x%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Sabre Nederland BV BPM610(x)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Sabre Nederland BV</td>
+          <td data-label="Model"><strong>BPM701 (Derivative of Health &amp; Life HL888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">Minor protocol violation; only 2 observers used in the validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Sabre+BPM701+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Sabre Nederland BV BPM701</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">SCIAN</td>
+          <td data-label="Model"><strong>LD-735</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">2 x AAA batteries. 90 Reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=SCIAN+LD-735+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for SCIAN LD-735</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">Scian</td>
+          <td data-label="Model"><strong>LD-753</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">2 x AAA batteries. 90 Reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Scian+LD-753+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Scian LD-753</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Seagull aps</td>
+          <td data-label="Model"><strong>S-868BA (OEM derivative of health &amp; Life HL 868BA</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Seagull+S-868BA+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Seagull aps S-868BA</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Seagull aps</td>
+          <td data-label="Model"><strong>S-888HA (OEM derivative of Health &amp; Life HL 888HA)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">Minor protocol violation; only 2 observers used in the validation study.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Seagull+S-888HA+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Seagull aps S-888HA</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Seca</td>
+          <td data-label="Model"><strong>Custo screen 400</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">For adults only.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Seca+Custo+screen+400+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Seca Custo screen 400</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under50" data-link="search">
+          <td data-label="Manufacturer">Seinex (Forecare)</td>
+          <td data-label="Model"><strong>SE-9400</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £50</td>
+          <td data-label="Notes">140 reading memory. 4 x AA batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Seinex+SE-9400+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Seinex (Forecare) SE-9400</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">SEJOY</td>
+          <td data-label="Model"><strong>BP-1307</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">4 x AA Batteries or mains adapter. 2 x 60 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=SEJOY+BP-1307+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for SEJOY BP-1307</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Sensacare</td>
+          <td data-label="Model"><strong>SAA-102</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Sensacare+SAA-102+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Sensacare SAA-102</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Sensacare</td>
+          <td data-label="Model"><strong>SAW-102</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Sensacare+SAW-102+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Sensacare SAW-102</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Spengler</td>
+          <td data-label="Model"><strong>TB-101, SMS-Pro (Derivative of KP-7500D)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Spengler+TB-101%2C+SMS-Pro+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Spengler TB-101, SMS-Pro</span></a></td>
+        </tr>
+        <tr data-type="vitalsignsmonitor" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Suntech</td>
+          <td data-label="Model"><strong>247</strong></td>
+          <td data-label="Type">Vital signs monitor</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Suntech+247+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Suntech 247</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Suntech</td>
+          <td data-label="Model"><strong>CT40</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">99 reading memory.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Suntech+CT40+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Suntech CT40</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Thermor</td>
+          <td data-label="Model"><strong>BIOS BD215</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Thermor+BIOS+BD215+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Thermor BIOS BD215</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Transtek</td>
+          <td data-label="Model"><strong>TMB-1491</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">60 reading memory x 2, four AAA batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Transtek+TMB-1491+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Transtek TMB-1491</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Transtek</td>
+          <td data-label="Model"><strong>TMB-1776</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Transtek+TMB-1776+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Transtek TMB-1776</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Transtek</td>
+          <td data-label="Model"><strong>TMB-2285-BT</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Transtek+TMB-2285-BT+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Transtek TMB-2285-BT</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Transtek</td>
+          <td data-label="Model"><strong>TMB-2296-BT</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Transtek+TMB-2296-BT+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Transtek TMB-2296-BT</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Transtek</td>
+          <td data-label="Model"><strong>TMB-986</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">2 x 60 readings. 4 x AAA batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Transtek+TMB-986+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Transtek TMB-986</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">Transtek</td>
+          <td data-label="Model"><strong>TMB-988</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">2 x AAA Alkaline Batteries.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Transtek+TMB-988+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Transtek TMB-988</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">UEBE</td>
+          <td data-label="Model"><strong>Visomat Comfort</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Visomat+Comfort+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for UEBE Visomat Comfort</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="direct">
+          <td data-label="Manufacturer">UEBE</td>
+          <td data-label="Model"><strong>Visomat Comfort Eco</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B001O1IH5O" rel="nofollow noopener">View on Amazon<span class="vh"> for UEBE Visomat Comfort Eco</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="under100" data-link="search">
+          <td data-label="Manufacturer">UEBE</td>
+          <td data-label="Model"><strong>Visomat Double Comfort</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Under £100</td>
+          <td data-label="Notes">Validated in both auscultatory and oscillometric mode.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Visomat+Double+Comfort+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for UEBE Visomat Double Comfort</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">UEBE</td>
+          <td data-label="Model"><strong>Visomat Handy Wrist</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Visomat+Handy+Wrist+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for UEBE Visomat Handy Wrist</span></a></td>
+        </tr>
+        <tr data-type="wrist" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Visocor</td>
+          <td data-label="Model"><strong>HM40</strong></td>
+          <td data-label="Type">Wrist</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Visocor+HM40+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Visocor HM40</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="over100" data-link="direct">
+          <td data-label="Manufacturer">Withings</td>
+          <td data-label="Model"><strong>BPM Connect (WPM05)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Over £100</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-direct" href="https://www.amazon.co.uk/dp/B07SJV1HNR" rel="nofollow noopener">View on Amazon<span class="vh"> for Withings BPM Connect (WPM05)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">Withings</td>
+          <td data-label="Model"><strong>BPM Connect PRO (WPM06)(Derivative of BPM Connect WPM05)</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Withings+BPM+Connect+PRO+%28WPM06%29+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for Withings BPM Connect PRO (WPM06)</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">yuwell</td>
+          <td data-label="Model"><strong>YE680B</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes"><span class="muted">None listed</span></td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Yuwell+YE680B+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for yuwell YE680B</span></a></td>
+        </tr>
+        <tr data-type="upperarm" data-band="unknownprice" data-link="search">
+          <td data-label="Manufacturer">yuwell</td>
+          <td data-label="Model"><strong>YE690A</strong></td>
+          <td data-label="Type">Upper Arm</td>
+          <td data-label="BIHS price band">Unknown Price</td>
+          <td data-label="Notes">2 x 74 reading memory. Large cuff up to 45cm.</td>
+          <td data-label="Amazon UK"><a class="az az-search" href="https://www.amazon.co.uk/s?k=Yuwell+YE690A+blood+pressure+monitor" rel="nofollow noopener">Search Amazon<span class="vh"> for yuwell YE690A</span></a></td>
+        </tr>
+        </tbody>
+      </table>
+      <p>Price bands come from the BIHS list and are only a guide; they aren't current Amazon prices. We checked Amazon links on 27 November 2026, but prices and stock change often. Some monitors may not be sold on Amazon UK, so search results may show other monitors. Always check the model number before you buy. "Derivative" means the BIHS has approved it as equivalent to the original model it was tested as.</p>
     </section>
 
     <section aria-labelledby="faq">
       <h2 id="faq">Frequently Asked Questions</h2>
       <details>
-        <summary>Can I take my tablet with food?</summary>
-        <p><strong>With or without food:</strong> Take your tablet at around the same time on the days it’s due. A phone reminder can help, especially while you’re taking it only three days a week. (<a href="https://www.nhs.uk/medicines/rosuvastatin/">NHS: How to take rosuvastatin</a>)</p>
+        <summary>How do I take a reading at home?</summary>
+        <p>Follow the instructions that came with your monitor. Take a reading and write it down, wait 1 minute, then take another. You usually do this twice a day, once in the morning and once in the evening. Your doctor or nurse will tell you how many days to do this for. (<a href="https://www.nhs.uk/conditions/blood-pressure-test/">NHS: Checking your blood pressure at home</a>)</p>
       </details>
       <details>
-        <summary>What if I miss a dose?</summary>
-        <p>Skip it and take your next tablet on your next planned day. Don’t take two tablets to make up for a missed dose. (<a href="https://www.nhs.uk/medicines/rosuvastatin/">NHS: Missed doses</a>)</p>
+        <summary>What do my readings mean?</summary>
+        <p>A reading has 2 numbers, for example 130/80. When you check it at home, a reading of <strong>135/85 or higher</strong> is usually considered high. Share your readings with your GP practice so they can look at the whole picture. (<a href="https://www.nhs.uk/conditions/blood-pressure-test/">NHS: What blood pressure readings mean</a>)</p>
       </details>
       <details>
-        <summary>When do I need a follow-up blood test?</summary>
-        <p>Ask your GP practice when to book your next blood test. It’s usually due <strong>2 to 3 months after starting or changing treatment</strong>, to check your cholesterol and look for any effect on your liver. (<a href="https://www.nice.org.uk/guidance/qs100/chapter/Quality-statement-4-Assessing-response-to-lipid-lowering-treatment">NICE: Blood tests after starting or changing treatment</a>)</p>
+        <summary>My monitor says it can detect an irregular heartbeat. Is that approved too?</summary>
+        <p>Not always. For several monitors, the BIHS notes that it has only approved the blood pressure reading. Extra features, like atrial fibrillation (AF) or irregular heartbeat detection, haven't been checked for accuracy. If your monitor warns you about an irregular heartbeat, speak to your GP practice. (<a href="https://bihs.org.uk/_userfiles/pages/files/bp_monitors_website_list_9.xlsx">BIHS approved monitor list</a>)</p>
+      </details>
+      <details>
+        <summary>I'm pregnant. Can I use any monitor on this list?</summary>
+        <p>Not necessarily. The BIHS has a separate list of monitors approved for pregnancy and other specialist uses. Ask your midwife or GP practice which monitor to use.</p>
       </details>
     </section>
 
     <section class="contact-box" aria-labelledby="help">
       <h2 id="help">When to ask for help</h2>
       <ul>
-        <li><strong>Contact your prescriber promptly</strong> if you get muscle pain, tenderness or weakness you can’t explain. Don’t wait until the end of the four weeks to report it. (<a href="https://www.nice.org.uk/guidance/ng238/chapter/Recommendations">NICE: Advice on muscle symptoms</a>)</li>
-        <li><strong>Call NHS 111 for urgent advice</strong> if you have severe muscle pain or weakness, especially if you also have a fever or your pee looks red or brown. These can be signs of a rare but serious side effect. (<a href="https://www.nhs.uk/medicines/rosuvastatin/">NHS: Rosuvastatin side effects</a>)</li>
-        <li><strong>Call 999</strong> if your lips, tongue or throat suddenly swell, or you’re struggling to breathe. These can be signs of a serious allergic reaction. (<a href="https://www.nhs.uk/conditions/Anaphylaxis/">NHS: Anaphylaxis</a>)</li>
+        <li><strong>Contact your GP practice or a pharmacy</strong> for a non-urgent check if your home readings are often high, or you think you might have high blood pressure. (<a href="https://www.nhs.uk/conditions/high-blood-pressure/">NHS: High blood pressure</a>)</li>
+        <li><strong>Get help from NHS 111</strong> if you often have headaches or blurred vision, have chest pain that comes and goes, or have other symptoms you're worried could be caused by high blood pressure. (<a href="https://www.nhs.uk/conditions/high-blood-pressure/">NHS: When to get help</a>)</li>
+        <li><strong>Call 999</strong> if you have sudden chest pain that doesn't go away, pain that spreads to your arm, neck, jaw, stomach or back, or chest pain with sweating, feeling sick, light-headed or short of breath. (<a href="https://www.nhs.uk/conditions/high-blood-pressure/">NHS: Urgent symptoms</a>)</li>
       </ul>
     </section>
 
-    <section class="download-section" aria-labelledby="pharmacy">
-      <h2 id="pharmacy">Free support from your pharmacy</h2>
-      <p>If rosuvastatin is new to you and you live in England, you may be able to get free support through the <strong>NHS New Medicine Service (NMS)</strong>. Ask your pharmacist if you can take part when you collect your first prescription.</p>
-      <p>After a chat when you collect your medicine, your pharmacist will usually check in <strong>7 to 14 days later</strong>, then again <strong>2 to 3 weeks after that</strong>; you can speak by phone or in a private room at the pharmacy. You can talk about how you’re getting on, any side effects, and ways to remember which days to take your tablets. If needed, the pharmacist can refer you back to your prescriber. (<a href="https://cpe.org.uk/wp-content/uploads/2026/04/NMS-patient-leaflet-Apr-2026.pdf">New Medicine Service patient leaflet</a>; <a href="https://www.england.nhs.uk/primary-care/pharmacy/pharmacy-services/nhs-new-medicine-service/">NHS England: New Medicine Service</a>)</p>
-      <p>You don’t need to wait for your pharmacy appointment if you’re worried about side effects. Follow the advice in “<a href="#help">When to ask for help</a>” above, and check with your prescriber if you’re unsure about switching to daily tablets.</p>
-      <a class="download-button" href="https://www.nhs.uk/nhs-services/pharmacies/get-help-with-newly-prescribed-medicines/">NHS: Get help with newly prescribed medicines</a>
+    <section class="download-section" aria-labelledby="source">
+      <h2 id="source">The full BIHS list</h2>
+      <p>The BIHS updates its list from time to time. Download the latest version to check a monitor, or to see monitors approved for specialist use, such as in pregnancy.</p>
+      <a class="download-button" href="https://bihs.org.uk/blood_pressure_technology/bp_monitor_validations.aspx">BIHS: Validated blood pressure monitors</a>
     </section>
   </main>
   <footer>
     <div class="footer-content">
       <p>This information provides general guidance only. Advice given by your doctor, pharmacist or other healthcare professional should always take precedence.</p>
+      <p>Links to Amazon UK are for convenience only and are not an endorsement of any seller. This page does not earn money from any links.</p>
     </div>
   </footer>
+  <script>
+    (function () {
+      var q = document.getElementById('q'), t = document.getElementById('type'),
+          b = document.getElementById('band'), l = document.getElementById('link'),
+          rows = Array.prototype.slice.call(document.querySelectorAll('#rows tr')),
+          count = document.getElementById('count'), none = document.getElementById('none'),
+          total = rows.length;
+      function norm(s) { return s.toLowerCase().replace(/[^a-z0-9]/g, ''); }
+      rows.forEach(function (r) { r._text = norm(r.cells[0].textContent + r.cells[1].textContent); });
+      function update() {
+        var term = norm(q.value), shown = 0;
+        rows.forEach(function (r) {
+          var ok = (!term || r._text.indexOf(term) > -1) &&
+                   (!t.value || r.dataset.type === t.value) &&
+                   (!b.value || (' ' + r.dataset.band + ' ').indexOf(' ' + b.value + ' ') > -1) &&
+                   (!l.value || r.dataset.link === l.value);
+          r.hidden = !ok; if (ok) shown++;
+        });
+        count.textContent = 'Showing ' + shown + ' of ' + total + ' monitors';
+        none.style.display = shown ? 'none' : 'block';
+      }
+      [q, t, b, l].forEach(function (el) { el.addEventListener('input', update); el.addEventListener('change', update); });
+    })();
+  </script>
 </body>
 </html>
